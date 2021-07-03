@@ -7,31 +7,31 @@
 
 
 
-version: '3'
+        version: '3'
 
-services:
+        services:
 
-  mongodb_container:
+        mongodb_container:
 
-    image: mongo:latest
+            image: mongo:latest
 
-    environment:
+            environment:
 
-      MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_USERNAME: root
 
-      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+            MONGO_INITDB_ROOT_PASSWORD: rootpassword
 
-    ports:
+            ports:
 
-      - 27017:27017
+            - 27017:27017
 
-    volumes:
+            volumes:
 
-      - mongodb_data_container:/data/db
+            - mongodb_data_container:/data/db
 
-volumes:
+        volumes:
 
-  mongodb_data_container:
+        mongodb_data_container:
 
 
 ### Steps
