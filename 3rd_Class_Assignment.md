@@ -18,7 +18,7 @@ db.inventory.insertMany([
 
 ### 1. Select Query
 
-db.inventory.find({})
+[db.inventory.find({})]
 
 ### 2. Select query skipping _id
 
