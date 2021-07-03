@@ -16,39 +16,39 @@ db.inventory.insertMany([
 ]); 
 
 
-### Select Query
+### 1. Select Query
 
 db.inventory.find({})
 
-### Select query skipping _id
+### 2. Select query skipping _id
 
 db.inventory.find({},{_id:0})
 
-### Select query using equality condtion
+### 3. Select query using equality condtion
 
 db.inventory.find({qty:25},{_id:0})
 
-### Select query using equality condtion
+### 4. Select query using equality condtion
 
 db.inventory.find({qty:25},{_id:0})
 
-### Select query using where in condtion
+### 5. Select query using where in condtion
 
 db.inventory.find({qty:75,item:{$in:['paper','postcard']}},{_id:0}).pretty();
 
-### Select query using or condtion
+### 6. Select query using or condtion
 
 db.inventory.find({$or:[{item:{in:['paper','planer']}},{qty:75}],status:"A"},{_id:0})
 
-### Select query using where GREATER THAN condtion
+### 7. Select query using where GREATER THAN condtion
 
 db.inventory.find({$or:[{item: "Notebook"},{item: "postcard"},{item:"journal"}],qty:{$gt:50}},{_id:0})
 
-### Select query using where GREATER THAN OR EQUAL condtion
+### 8. Select query using where GREATER THAN OR EQUAL condtion
 
 db.inventory.find({$or:[{item: "Notebook"},{item: "postcard"},{item:"journal"}],qty:{$gte:50}},{_id:0})
 
-### Select query using where NOT EQUAL condtion
+### 9. Select query using where NOT EQUAL condtion
 
 db.inventory.find({$or:[{item: "Notebook"},{item: "postcard"},{item:"journal"}],qty:{$lt:500},qty:{$ne:45}},{_id:0})
 
