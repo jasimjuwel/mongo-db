@@ -48,6 +48,11 @@
 ### Docker database command
 
 - show databases
-- use student
+- use food
+#### insert data :
+
+    db.fruits.insertMany([ {name: "apple", origin: "usa", price: 5}, {name: "orange", origin: "italy", price: 3}, {name: "mango", origin: "malaysia", price: 3} ])
+
+
 - show collections
-- db.class.find().pretty()
+- db.fruits.find().pretty()
