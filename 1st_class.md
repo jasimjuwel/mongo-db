@@ -34,16 +34,20 @@
         mongodb_data_container:
 
 
-### Steps
+### Docker compose command
 
 - docker-compose up -d
 - docker ps
 - docker volume ls
 
+### Docker bash terminal
+
 - sudo docker exec -it mongodb_mongodb_container_1 bash
 - mongo admin -u root -p rootpassword
 
+### Docker database command
+
 - show databases
-- use food
+- use student
 - show collections
-- db.fruits.find().pretty()
+- db.class.find().pretty()
