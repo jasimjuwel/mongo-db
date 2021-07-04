@@ -1,4 +1,4 @@
-## 1st Class Assignment
+## 1st Class (Docker setup)
 
    
 ### docker-compose.yml
