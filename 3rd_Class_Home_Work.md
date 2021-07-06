@@ -79,4 +79,17 @@ To query documents based on the NOT condition, you need to use $not keyword foll
     db.inventory.find({$or:[{item: "notebook"},{item: "postcard"},{item:"journal"}],qty:{$lt:500},qty:{$ne:45}},{_id:0}).pretty();
 
 
+### 10. The find() query for nested document?
+
+
+    db.inventory.find( { size: { h: 14, w: 21, uom: "cm" } ).pretty()
+
+    db.inventory.find({"size.w": 15.25}).pretty()
+
+    db.inventory.find( { "size.h": { $lt: 15 }, "size.uom": "in", status: "D" } ).pretty()
+
+
+    
+
+
 
